@@ -24,12 +24,9 @@ Time Complexity: O(n)
 To make MyHashMap.size() more effective you could make the size an instance variable
 and increment the value as you add items to the hashmap.
 
-## How does this implementation compare to one where you would directly use your
-linked Node class from the earlier assignment? Answer briefly in terms
-of ease of implementation, correctness,
-reliability, and performance.
+## How does this implementation compare to one where you would directly use your linked Node class from the earlier assignment? Answer briefly in terms of ease of implementation, correctness, reliability, and performance.
 
-Implementation: the linked Nodes are easier to implement
-Correctness: Both are the same correctness
-Reliability: They are both reliable
-Performance: MyHashMap is better
+- Implementation: the linked Nodes are easier to implement
+- Correctness: Both are the same correctness
+- Reliability: They are both reliable
+- Performance: MyHashMap is better
