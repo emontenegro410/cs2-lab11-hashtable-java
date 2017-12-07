@@ -1,9 +1,8 @@
+import java.util.*;
 import org.jgrapht.*;
 import org.jgrapht.graph.*;
 import org.jgrapht.traverse.*;
-
-
-import java.util.*;
+import org.jgrapht.traverse.AbstractGraphIterator;
 
 
 public class Country {
@@ -33,12 +32,27 @@ public class Country {
         myMap.addEdge(CL, AR);
         System.out.println(myMap);
 
-        final Iterator<String> bf = new BreadthFirstIterator<>(myMap, PY);
+        final Iterator<String> bf = new BreadthFirstIterator<>(myMap, BO);
         while (bf.hasNext()) {
             final String country = bf.next();
-
+            System.out.println("This is the First country " + country);
         }
-        System.out.println(bf);
+
+        final Iterator<String> cf = new ClosestFirstIterator<>(myMap, BO);
+        while (cf.hasNext()) {
+            final String country = cf.next();
+            System.out.println("This is the closest to Bolivia " + country);
+        }
+
+        final Iterator<String> df = new DepthFirstIterator<>(myMap, BO);
+        while (df.hasNext()) {
+            final String country = df.next();
+            System.out.println("Depth first BO start " + country);
+        }
+     /*   final Iterator<String> rw = new RandomWalkIterator<>(myMap, BO);
+        while (rw.hasNext()) {
+            final String country = rw.next();
+            System.out.println("Random walk BO start " + country);
+        } */
     }
 }
-
