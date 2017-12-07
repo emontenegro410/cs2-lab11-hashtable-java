@@ -1,9 +1,8 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.jgrapht.*;
+import org.jgrapht.graph.*;
+import org.jgrapht.traverse.*;
+
+
 import java.util.*;
 
 
@@ -17,18 +16,29 @@ public class Country {
     final static String CL = "Chile";
     final static String AR = "Argentina";
 
-    final Graph<String, DefaultEdge> myMap = new SimpleGraph<>(DefaultEdge.class);
-    //DOMAIN
-    myMap.addVertex(BO);
-    myMap.addVertex(PY);
-    myMap.addVertex(BR);
-    myMap.addVertex(PE);
-    myMap.addVertex(CL);
-    myMap.addVertex(AR);
-    //RELATION
-    myMap.addEdge(BO, PY);
-    myMap.addEdge(BO, BR);
-    myMap.addEdge(BO, PE);
-    myMap.addEdge(BO, CL);
-    myMap.addEdge(BO, AR);
+    public static void countries() {
+        final Graph<String, DefaultEdge> myMap = new SimpleGraph<>(DefaultEdge.class);
+        //DOMAIN
+        myMap.addVertex(BO);
+        myMap.addVertex(PY);
+        myMap.addVertex(BR);
+        myMap.addVertex(PE);
+        myMap.addVertex(CL);
+        myMap.addVertex(AR);
+        //RELATION
+        myMap.addEdge(BO, PY);
+        myMap.addEdge(PY, BR);
+        myMap.addEdge(BR, PE);
+        myMap.addEdge(PE, CL);
+        myMap.addEdge(CL, AR);
+        System.out.println(myMap);
+
+        final Iterator<String> bf = new BreadthFirstIterator<>(myMap, PY);
+        while (bf.hasNext()) {
+            final String country = bf.next();
+
+        }
+        System.out.println(bf);
+    }
 }
+
