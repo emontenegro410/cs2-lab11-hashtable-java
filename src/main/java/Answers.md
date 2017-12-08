@@ -2,10 +2,9 @@
 
 ### Question: Discuss the differences among the results. Does the starting point make a difference?
 
-- `BreadthFirstIterator` and `DepthFirstIterator` will print the same results when starting at the same vertex.
+- 1. `BreadthFirstIterator` and `DepthFirstIterator` will print the same results when starting at the same vertex.
 
-- Start with "Bolivia" <br>
-
+### Starting with "Bolivia"
 | `BreadthFirstIterator`| `DepthFirstIterator` |
 | -------- | ------- |
 | Bolivia  | Bolivia |
@@ -16,8 +15,7 @@
 | Argentina|Argentina|
 
 
-- Starting with "Paraguay" <br>
-
+### Starting with "Paraguay"
 | `BreadthFirstIterator`| `DepthFirstIterator` |
 | -------- | -------    |
 | Paraguay | Paraguay   |
@@ -28,10 +26,9 @@
 | Argentina| Bolivia    |
 
 
-2. `ClosestFirstIterator` will print the same result with `BreadthFirstIterator`.<br>
+- 2. `ClosestFirstIterator` will print the same result as `BreadthFirstIterator`.
 
-- Starting with "Bolivia" <br>
-
+### Starting with "Bolivia"
 | `BreadthFirstIterator`| `ClosestFirstIterator` |
 | -------- | ------- |
 | Bolivia  | Bolivia |
@@ -42,8 +39,7 @@
 | Argentina|Argentina|
 
 
-- Starting with "Paraguay" <br>
-
+### Starting with "Paraguay"
 | `BreadthFirstIterator`| `ClosestFirstIterator` |
 | -------- | ------- |
 | Paraguay | Paraguay|
@@ -53,8 +49,8 @@
 | Chile    | Chile   |
 | Argentina|Argentina|
 
+<br>
 3. `RandomWalkIterator` will print the country names randomly without taking into consideration the starting point.
-
 
 
 
