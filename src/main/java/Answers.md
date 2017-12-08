@@ -17,7 +17,8 @@ The starting point does matter.
 | Argentina|Argentina|
 
 
-### Starting with "Paraguay" The results are different because Bolivia only has one edge. So when using Paraguay starts and `DepthFirstIterator` is used it will go Brazil second vs. Bolivia.
+### Starting with "Paraguay"
+- The results are different because Bolivia only has one edge. So when using Paraguay starts and `DepthFirstIterator` is used it will go Brazil second vs. Bolivia.
 | `BreadthFirstIterator`| `DepthFirstIterator` |
 | -------- | -------    |
 | Paraguay | Paraguay   |
