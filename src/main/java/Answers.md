@@ -2,7 +2,9 @@
 
 ### Question: Discuss the differences among the results. Does the starting point make a difference?
 
-- 1. `BreadthFirstIterator` and `DepthFirstIterator` will print the same results when starting at the same vertex.
+The starting point does matter.
+
+- `BreadthFirstIterator` and `DepthFirstIterator` will print the same results when starting at the same vertex.
 
 ### Starting with "Bolivia"
 | `BreadthFirstIterator`| `DepthFirstIterator` |
@@ -15,7 +17,7 @@
 | Argentina|Argentina|
 
 
-### Starting with "Paraguay"
+### Starting with "Paraguay" The results are different because Bolivia only has one edge. So when using Paraguay starts and `DepthFirstIterator` is used it will go Brazil second vs. Bolivia.
 | `BreadthFirstIterator`| `DepthFirstIterator` |
 | -------- | -------    |
 | Paraguay | Paraguay   |
@@ -26,7 +28,7 @@
 | Argentina| Bolivia    |
 
 
-- 2. `ClosestFirstIterator` will print the same result as `BreadthFirstIterator`.
+- `ClosestFirstIterator` will print the same result as `BreadthFirstIterator`.
 
 ### Starting with "Bolivia"
 | `BreadthFirstIterator`| `ClosestFirstIterator` |
@@ -50,9 +52,10 @@
 | Argentina|Argentina|
 
 <br>
-3. `RandomWalkIterator` will print the country names randomly without taking into consideration the starting point.
-
+- `RandomWalkIterator` will print the country names randomly without taking into consideration the starting point.
 
 
 ### Question: Give two or three examples of how/why a real-world map might require more than four colors.
 
+If several countries share the same corner, then more than four colors need to be used. In addition, for visual purposes
+different countries are shown in different colors not only in 4 colors.
